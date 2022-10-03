@@ -15,7 +15,8 @@ Source:         %{crates_source}
 
 ExclusiveArch:  %{rust_arches}
 
-BuildRequires:  fyra-srpm-macros
+BuildRequires:  anda-srpm-macros
+BuildRequires:  rust-packaging
 BuildRequires:  openssl-devel
 
 #BuildRequires:  external:crate:sccache
@@ -36,7 +37,7 @@ Summary:        %{summary}
 %{_bindir}/zellij
 
 %prep
-%autosetup -n %{crate}-%{version_no_tilde} -p1
+%autosetup -n %{crate}-%{version_no_tilde}
 %cargo_prep_online
 
 
